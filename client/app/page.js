@@ -4,10 +4,8 @@ import Dropdown from "@/components/dropdown";
 import GenerateRecipe from "@/components/GenerateRecipe";
 import RecipeCard from "@/components/RecipeCard";
 import userStore from "@/lib/userStore";
-import { useState } from "react";
 
 export default function Home() {
-  const [loading, setLoading] = useState(false);
   const { foodRecipe, foodImage } = userStore();
 
   return (
@@ -18,8 +16,8 @@ export default function Home() {
         {!foodRecipe && <GenerateRecipe />}
         {foodRecipe && <RecipeCard />}
       </div>
-      <button onClick={() => console.log(foodRecipe)}>get data</button>
-      <button onClick={() => console.log(foodImage)}>get image</button>
+      {/* <button onClick={() => console.log(foodRecipe)}>get data</button>
+      <button onClick={() => console.log(foodImage)}>get image</button> */}
     </main>
   );
 }
