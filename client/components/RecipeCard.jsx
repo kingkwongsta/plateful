@@ -15,19 +15,19 @@ import userStore from "@/lib/userStore";
 import Image from "next/image";
 
 export default function RecipeCard() {
-  const { drinkImage, drinkRecipe, setDrinkRecipe } = userStore();
+  const { foodImage, foodRecipe, setFoodRecipe } = userStore();
 
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader className="px-6 pt-6 pb-4 text-center">
-        <CardTitle className="text-3xl font-bold">{drinkRecipe.name}</CardTitle>
-        <CardDescription>{drinkRecipe.description}</CardDescription>
+        <CardTitle className="text-3xl font-bold">{foodRecipe.name}</CardTitle>
+        <CardDescription>{foodRecipe.description}</CardDescription>
       </CardHeader>
       <Image
-        alt={drinkRecipe.name}
+        alt={foodRecipe.name}
         className="object-cover my-2"
         height="600"
-        src={drinkImage}
+        src={foodImage}
         width="1200"
       />
       <div className="flex flex-col sm:flex-row mt-6">
@@ -35,13 +35,11 @@ export default function RecipeCard() {
           <div className="items-center gap-4">
             <h3 className="text-sm font-semibold mb-1">Ingredients</h3>
             <ul className="text-sm list-disc marker:text-white pl-4">
-              {drinkRecipe.ingredients
-                .filter((item) => item.name !== "Ice cubes")
-                .map((ingredient, index) => (
-                  <li key={index}>
-                    {ingredient.quantity} {ingredient.name.toLowerCase()}
-                  </li>
-                ))}
+              {foodRecipe.ingredients.map((ingredient, index) => (
+                <li key={index}>
+                  {ingredient.quantity} {ingredient.name.toLowerCase()}
+                </li>
+              ))}
             </ul>
           </div>
         </CardContent>
@@ -49,7 +47,7 @@ export default function RecipeCard() {
           <div className="">
             <h3 className="text-sm font-semibold mb-1">Preparation</h3>
             <ul className="list-decimal pl-4 text-sm">
-              {drinkRecipe.instructions.map((step, index) => (
+              {foodRecipe.instructions.map((step, index) => (
                 <li key={index}>{step}</li>
               ))}
             </ul>
@@ -57,12 +55,7 @@ export default function RecipeCard() {
         </CardContent>
       </div>
       <CardFooter className="flex justify-center gap-2">
-        <Button
-          className="mt-4"
-          onClick={() => {
-            setDrinkRecipe("");
-          }}
-        >
+        <Button className="mt-4" onClick={() => setFoodRecipe("")}>
           Start Over
         </Button>
       </CardFooter>
