@@ -24,7 +24,7 @@ async def testing():
 async def more():
     return {"1 + 1 = 3"}
 
-from backend.food import generate_food_recipe
+from food import generate_food_recipe
 
 @app.get("/food")
 async def get_food(cuisine: str = Query(default=None), course: str = Query(default=None), allergies: str = Query(default=None)):
