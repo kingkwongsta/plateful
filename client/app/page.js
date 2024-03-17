@@ -16,7 +16,7 @@ export default function Home() {
       <Dropdown />
       <div className="flex flex-col items-center">
         {!foodRecipe && <GenerateRecipe />}
-        {/* {foodRecipe && <RecipeCard />} */}
+        {foodRecipe && <RecipeCard />}
       </div>
       <button onClick={() => console.log(foodRecipe)}>get data</button>
       <button onClick={() => console.log(foodImage)}>get image</button>

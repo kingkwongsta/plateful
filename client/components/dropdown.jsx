@@ -18,13 +18,7 @@ export default function Dropdown() {
 
   const cuisineOptions = ["French", "Italian", "Japanese", "Indian", "Mexican"];
 
-  const courseOptions = [
-    "Appetizer",
-    "Salad",
-    "Main Course",
-    "Dessert",
-    "Beverage",
-  ];
+  const courseOptions = ["Appetizer", "Main Course", "Dessert"];
 
   const allergiesOptions = [
     "Gluten",

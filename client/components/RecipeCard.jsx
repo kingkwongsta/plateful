@@ -23,13 +23,13 @@ export default function RecipeCard() {
         <CardTitle className="text-3xl font-bold">{foodRecipe.name}</CardTitle>
         <CardDescription>{foodRecipe.description}</CardDescription>
       </CardHeader>
-      <Image
+      {/* <Image
         alt={foodRecipe.name}
         className="object-cover my-2"
         height="600"
         src={foodImage}
         width="1200"
-      />
+      /> */}
       <div className="flex flex-col sm:flex-row mt-6">
         <CardContent className="">
           <div className="items-center gap-4">
