@@ -38,7 +38,7 @@ def generate_food_recipe(cuisine: str, course: str, allergies: str) -> Recipe:
         },
     )
 
-    instructions = f"Create a unique and creative {course} recipe based on the following user preferences: {cuisine} cuisine and {allergies} allergies. Do not include {cuisine}, {course}, or {allergies} in the recipe name."
+    instructions = f"Create a {course} food recipe based on the following user preferences: {cuisine} cuisine and {allergies} allergies.  Do not include {cuisine}, {course}, or {allergies} in the recipe name."
     parser = JsonOutputParser(pydantic_object=Recipe)
     recipe_query = instructions
     prompt = PromptTemplate(
