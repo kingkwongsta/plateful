@@ -5,9 +5,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Drink Mixer",
+  title: "Plateful",
   description:
-    "Discover a world of exquisite cocktails by sharing your preferences",
+    "Discover a world of fun food recipes by sharing your preferences",
   icons: {
     icon: "/favicon.ico",
   },
