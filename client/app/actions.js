@@ -4,7 +4,6 @@ import { Client } from "@octoai/client";
 const client = new Client(process.env.OCTOAI_API_TOKEN);
 
 export async function createImage(data) {
-  console.log("TESTING");
   try {
     console.log("Generating image for recipe:", data.name);
 
@@ -13,7 +12,7 @@ export async function createImage(data) {
       .map((ingredient) => ingredient.name.toLowerCase())
       .join(", ");
 
-    const modifiedPrompt = `A restaurant table setting with a plate featuring ${data.name}. The plate is surrounded by the ingredients: ${ingredientString}. A sign with the text "${data.name}" is next to the plate. Utilizing photorealistic and hyper-detailed style to capture the rich textures and vibrant colors of the scene. Additionally, emphasize the interplay of light and shadow, creating a sense of drama and intrigue.`;
+    const modifiedPrompt = `A restaurant table setting with a plate featuring ${data.name}. The plate is surrounded by the ingredients: ${ingredientString}. A sign with the text "${data.name}" is next to the plate.`;
 
     const inputs = {
       prompt: modifiedPrompt,

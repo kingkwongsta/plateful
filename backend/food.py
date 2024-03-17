@@ -30,7 +30,7 @@ def generate_food_recipe(cuisine: str, course: str, allergies: str) -> Recipe:
             "model": "smaug-72b-chat",
             "max_tokens": 1024,
             "presence_penalty": 0,
-            "temperature": 0.6,
+            "temperature": 0.7,
             "top_p": 0.9,
             "messages": [
                 {"role": "system", "content": "You are an expert chef that outputs JSON"}
