@@ -11,10 +11,10 @@ export default function Title() {
           onClick={() => setDrinkRecipe("")}
           className="text-3xl font-bold tracking-tight"
         >
-          Drink Mixer
+          Plateful
         </h1>
         <p className="text-gray-500 dark:text-gray-400">
-          Discover a world of exquisite cocktails by sharing your preferences
+          Find the recipe to satisfy your cravings by sharing your preferences
         </p>
       </div>
     </div>
