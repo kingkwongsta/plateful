@@ -23,16 +23,16 @@ export default function GenerateRecipe() {
 
     const baseUrl =
       process.env.NODE_ENV === "production"
-        ? `https://food-recipe-backend.vercel.app/recipe?${queryString}`
-        : `/recipe?${queryString}`;
+        ? `https://food-recipe-backend.vercel.app/recipe`
+        : `http://127.0.0.1:8000/food`;
 
     const url = `${baseUrl}?${queryString}`;
     const res = await fetch(url);
     const data = await res.json();
 
     if (data) {
-      const imageResponse = await createImage(data, userCourse);
-      const imageURL = `data:image/jpeg;base64,${imageResponse[0].imageData}`;
+      // const imageResponse = await createImage(data, userCourse);
+      // const imageURL = `data:image/jpeg;base64,${imageResponse[0].imageData}`;
       setFoodRecipe(data);
       setFoodImage(imageURL);
     }

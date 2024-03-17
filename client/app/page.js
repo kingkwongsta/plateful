@@ -8,18 +8,18 @@ import { useState } from "react";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
-  const { drinkRecipe, drinkImage } = userStore();
+  const { foodRecipe, foodImage } = userStore();
 
   return (
     <main className="w-full px-12 py-12 md:py-24 space-y-[50px]">
       <Title />
       <Dropdown />
       <div className="flex flex-col items-center">
-        {!drinkRecipe && <GenerateRecipe />}
-        {drinkRecipe && <RecipeCard />}
+        {!foodRecipe && <GenerateRecipe />}
+        {foodRecipe && <RecipeCard />}
       </div>
-      {/* <button onClick={() => console.log(drinkRecipe)}>get data</button>
-      <button onClick={() => console.log(drinkImage)}>get image</button> */}
+      <button onClick={() => console.log(foodRecipe)}>get data</button>
+      <button onClick={() => console.log(foodImage)}>get image</button>
     </main>
   );
 }
