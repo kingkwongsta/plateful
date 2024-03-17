@@ -21,13 +21,13 @@ export default function Dropdown() {
   const courseOptions = ["Appetizer", "Main Course", "Dessert"];
 
   const allergiesOptions = [
+    "None",
     "Gluten",
     "Dairy",
     "Nuts",
     "Shellfish",
     "Soy",
     "Eggs",
-    "None",
   ];
 
   return (

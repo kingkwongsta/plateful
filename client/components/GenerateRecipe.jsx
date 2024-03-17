@@ -1,8 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import userStore from "@/lib/userStore";
 import { useState } from "react";
 import LoadingIcon from "./LoadingIcon";
+import userStore from "@/lib/userStore";
+import { createImage } from "@/app/actions";
 
 export default function GenerateRecipe() {
   const [isLoading, setIsLoading] = useState(false);
@@ -31,8 +32,9 @@ export default function GenerateRecipe() {
     const data = await res.json();
 
     if (data) {
-      // const imageResponse = await createImage(data, userCourse);
-      // const imageURL = `data:image/jpeg;base64,${imageResponse[0].imageData}`;
+      console.log("in the image api call");
+      const imageResponse = await createImage(data);
+      const imageURL = `data:image/jpeg;base64,${imageResponse[0].imageData}`;
       setFoodRecipe(data);
       setFoodImage(imageURL);
     }
