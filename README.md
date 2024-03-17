@@ -1,8 +1,8 @@
-# Drink Mixer
-Discover a world of exquisite cocktail recipes
+# Plateful
+Find the recipe to satisfy your cravings
 ### Live Site: [https://plateful-kingkwongsta.vercel.app/](https://plateful-kingkwongsta.vercel.app/)
 
-- Create a cocktail recipe based on your preference with Generative AI
+- Create a food recipe based on your preference with Generative AI
 
 ## Tech Stack
 
