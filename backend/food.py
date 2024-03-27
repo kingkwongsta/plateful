@@ -27,7 +27,7 @@ def generate_food_recipe(cuisine: str, course: str, allergies: str) -> Recipe:
         endpoint_url=endpoint_url,
         octoai_api_token=octoai_api_token,
         model_kwargs={
-            "model": "smaug-72b-chat",
+            "model": "mixtral-8x7b-instruct",
             "max_tokens": 1024,
             "presence_penalty": 0,
             "temperature": 0.7,
