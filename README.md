@@ -1,6 +1,6 @@
 # Plateful
 Find the recipe to satisfy your cravings
-### Live Site: [https://plateful-kingkwongsta.vercel.app/](https://plateful-kingkwongsta.vercel.app/)
+### Live Site: [https://plateful-ten.vercel.app/](https://plateful-ten.vercel.app/)
 
 - Create a food recipe based on your preference with Generative AI
 
