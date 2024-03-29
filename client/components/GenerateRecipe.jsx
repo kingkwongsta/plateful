@@ -24,7 +24,7 @@ export default function GenerateRecipe() {
 
     const baseUrl =
       process.env.NODE_ENV === "production"
-        ? "https://plateful-backend.vercel.app/food"
+        ? "https://food-2twnlcizjq-wl.a.run.app/food"
         : "http://127.0.0.1:8000/food";
 
     const url = `${baseUrl}?${queryString}`;
