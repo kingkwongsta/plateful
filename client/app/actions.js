@@ -17,15 +17,16 @@ export async function createImage(data) {
     const inputs = {
       prompt: modifiedPrompt,
       negative_prompt: "Blurry image, distortion, low-res, poor quality",
-      loras: {
-        "octoai:paint-splash": 0.5,
-      },
+      checkpoint: "octoai:lightning_sdxl",
+      // loras: {
+      //   "octoai:paint-splash": 0.5,
+      // },
       width: 1536,
       height: 640,
       num_images: 1,
       sampler: "DDIM",
-      steps: 30,
-      cfg_scale: 12,
+      steps: 8,
+      cfg_scale: 3,
       use_refiner: true,
       high_noise_frac: 0.8,
       style_preset: "Watercolor",
