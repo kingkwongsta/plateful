@@ -1,7 +1,9 @@
 python-dotenv
 langchain
 fastapi[all]
-octoai-sdk
+octoai
 nltk
 pydantic
 gunicorn
+supabase
+requests
